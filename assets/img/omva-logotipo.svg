@@ -1,0 +1,10 @@
+<svg width="380" height="110" viewBox="0 0 380 110" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>Logo da Omva</title>
+<desc>Selo teal com balão de conversa e check, ao lado do nome omva em Poppins, alinhado pela base</desc>
+
+<rect x="40" y="15" width="70" height="70" rx="18" fill="#0d9488"></rect>
+<rect x="52" y="27" width="46" height="31" rx="8" fill="none" stroke="#ffffff" stroke-width="4"></rect>
+<path d="M59 58 L55 68 L68 58 Z" fill="#ffffff"></path>
+<path d="M60 44 L67 51 L80 37" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+<text x="125" y="85" font-size="64" style="font-family:'Poppins',sans-serif;font-weight:600;" fill="#1c1917">omva</text>
+</svg>

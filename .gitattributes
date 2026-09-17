@@ -1,0 +1,7 @@
+# Desenvolvimento no Windows, servidor Linux: normaliza as quebras de linha.
+* text=auto eol=lf
+*.svg text eol=lf
+*.png binary
+*.jpg binary
+*.webp binary
+*.ico binary

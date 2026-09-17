@@ -1,0 +1,356 @@
+/*
+  omva — site institucional
+  Os tokens abaixo vêm do design system da marca (artefato "Omva"), copiados
+  com os mesmos nomes. Nenhuma cor literal fora do :root.
+*/
+
+:root {
+  /* --- Marca --- */
+  --brand: #0d9488;
+  --brand-hover: #0f766e;
+  --brand-tint: #ccfbf1;
+
+  /* --- Neutras --- */
+  --ink: #1c1917;
+  --ink-muted: #57534e;
+  --surface: #ffffff;
+  --surface-alt: #f5f5f4;
+  --border: #e7e5e4;
+
+  /* --- Semânticas (mesmos significados do produto) --- */
+  --success: #15803d;
+  --warning: #b45309;
+  --error: #b91c1c;
+  --info: #1d4ed8;
+
+  /* --- Tipografia --- */
+  --display: 'Poppins', sans-serif;
+  --sans: 'Inter', system-ui, sans-serif;
+
+  /* --- Espaçamento --- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+
+  /* --- Raio --- */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+
+  --largura: 1100px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--ink);
+  background-color: var(--surface);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, p, ul, figure { margin: 0; }
+ul { padding: 0; list-style: none; }
+a { color: inherit; text-decoration: none; }
+img, svg { max-width: 100%; }
+
+/* Acessibilidade: o foco pelo teclado precisa ser visível. */
+a:focus-visible, button:focus-visible {
+  outline: 3px solid var(--brand-hover);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+/* ==========================================================================
+   Estrutura
+   ========================================================================== */
+
+.envoltorio {
+  width: 100%;
+  max-width: var(--largura);
+  margin: 0 auto;
+  padding-left: var(--space-4);
+  padding-right: var(--space-4);
+}
+
+.secao { padding-block: 72px; }
+.secao--alt { background-color: var(--surface-alt); }
+
+.pilha { display: flex; flex-direction: column; }
+.linha { display: flex; flex-direction: row; }
+.centro { align-items: center; }
+.entre { justify-content: space-between; }
+.quebra { flex-wrap: wrap; }
+.gap-2 { gap: var(--space-2); }
+.gap-3 { gap: var(--space-3); }
+.gap-4 { gap: var(--space-4); }
+.gap-5 { gap: var(--space-5); }
+
+/* ==========================================================================
+   Tipografia
+   ========================================================================== */
+
+.titulo-hero {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: -0.02em;
+}
+
+.titulo-secao {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: -0.01em;
+}
+
+.titulo-card {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.texto { font-size: 16px; line-height: 26px; }
+.texto-grande { font-size: 18px; line-height: 30px; }
+.texto-apoio { font-size: 14px; line-height: 20px; color: var(--ink-muted); }
+.legenda {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  color: var(--ink-muted);
+}
+
+.suave { color: var(--ink-muted); }
+
+/* A cor da marca tem 3,74:1 sobre branco — só pode em texto grande (24px+).
+   Para texto pequeno em destaque, usamos o tom escuro (5,47:1). */
+.destaque { color: var(--brand-hover); font-weight: 600; }
+
+.olho {
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--brand-hover);
+}
+
+/* ==========================================================================
+   Cabeçalho
+   ========================================================================== */
+
+.topo {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.topo__interno { min-height: 72px; }
+.topo__logo { height: 36px; width: auto; }
+
+.topo__nav { gap: var(--space-4); align-items: center; }
+.topo__link { font-size: 14px; font-weight: 500; color: var(--ink-muted); }
+.topo__link:hover { color: var(--ink); }
+
+/* ==========================================================================
+   Botões
+   ========================================================================== */
+
+.botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 48px;
+  padding: 0 var(--space-4);
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  font-family: var(--sans);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color .18s ease, border-color .18s ease;
+}
+
+/* Fundo no tom escuro da marca: branco sobre ele dá 5,47:1 e passa em AA. */
+.botao--principal { background-color: var(--brand-hover); color: var(--surface); }
+.botao--principal:hover { background-color: var(--ink); }
+
+.botao--secundario {
+  background-color: var(--surface);
+  border-color: var(--border);
+  color: var(--ink);
+}
+.botao--secundario:hover { border-color: var(--ink-muted); }
+
+.botao--compacto { min-height: 40px; font-size: 14px; }
+
+/* ==========================================================================
+   Hero
+   ========================================================================== */
+
+.hero { padding-block: 88px 72px; }
+.hero__texto { max-width: 560px; }
+.hero__conteudo { gap: 56px; align-items: center; }
+
+/* ==========================================================================
+   Kanban ilustrativo (mostra o produto de verdade, não um desenho genérico)
+   ========================================================================== */
+
+.quadro {
+  background-color: var(--surface-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-3);
+  gap: var(--space-2);
+  flex: 1 1 380px;
+  min-width: 0;
+  overflow-x: auto;
+}
+
+.coluna {
+  flex: 1 0 128px;
+  gap: var(--space-2);
+  min-width: 0;
+}
+
+.coluna__titulo { gap: var(--space-2); align-items: center; padding-inline: var(--space-1); }
+
+.ponto {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  flex: none;
+}
+.ponto--novo { background-color: var(--info); }
+.ponto--negociacao { background-color: var(--warning); }
+.ponto--proposta { background-color: var(--brand); }
+.ponto--fechado { background-color: var(--success); }
+
+.cartao {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-2);
+  gap: var(--space-1);
+}
+
+.cartao__nome { font-size: 13px; font-weight: 600; line-height: 18px; }
+
+.barra {
+  height: 3px;
+  background-color: var(--border);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+.barra__cheio { height: 100%; background-color: var(--brand); border-radius: var(--radius-full); }
+
+/* ==========================================================================
+   Cards de conteúdo
+   ========================================================================== */
+
+.cards { gap: var(--space-4); }
+
+.card {
+  flex: 1 1 300px;
+  min-width: 0;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  gap: var(--space-2);
+}
+
+.card--limpo { background-color: transparent; border: none; padding: 0; }
+
+.selo-icone {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  background-color: var(--brand-tint);
+  color: var(--brand-hover);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+}
+
+.numero {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  color: var(--brand);
+}
+
+/* ==========================================================================
+   Chamada final
+   ========================================================================== */
+
+.chamada {
+  background-color: var(--ink);
+  color: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: 56px var(--space-5);
+  gap: var(--space-4);
+  align-items: center;
+  text-align: center;
+}
+
+.chamada .suave { color: var(--border); }
+.chamada .botao--secundario {
+  background-color: transparent;
+  border-color: var(--ink-muted);
+  color: var(--surface);
+}
+.chamada .botao--secundario:hover { border-color: var(--surface); }
+
+/* ==========================================================================
+   Rodapé
+   ========================================================================== */
+
+.rodape {
+  border-top: 1px solid var(--border);
+  padding-block: var(--space-5);
+}
+.rodape__logo { height: 28px; width: auto; }
+
+/* ==========================================================================
+   Telas pequenas
+   ========================================================================== */
+
+@media (max-width: 820px) {
+  .secao { padding-block: 56px; }
+  .hero { padding-block: 56px 48px; }
+  .titulo-hero { font-size: 36px; line-height: 44px; }
+  .titulo-secao { font-size: 26px; line-height: 34px; }
+  /*
+    `flex-wrap: wrap` precisa sair junto com a virada para coluna. Num container
+    de coluna com wrap, cada linha é dimensionada pelo conteúdo, e o
+    `align-items: stretch` estica o filho até a LINHA (a largura do texto), não
+    até a tela — o bloco fica maior que o celular e a página rola de lado.
+  */
+  .empilha {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+  }
+
+  /* Larguras pensadas para o desktop não podem sobreviver ao empilhamento. */
+  .hero__texto,
+  .quadro { max-width: 100%; }
+  .topo__nav { gap: var(--space-3); }
+  .esconde-mobile { display: none; }
+  .chamada { padding: 40px var(--space-4); }
+}

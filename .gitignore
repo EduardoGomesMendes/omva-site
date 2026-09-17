@@ -1,0 +1,7 @@
+# Ruído do sistema operacional e de editores
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.log
