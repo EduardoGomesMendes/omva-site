@@ -295,6 +295,110 @@ a:focus-visible, button:focus-visible {
 }
 
 /* ==========================================================================
+   Planos
+   ========================================================================== */
+
+.plano { position: relative; justify-content: space-between; }
+
+.plano__lista { flex: 1; }
+
+.plano__check {
+  color: var(--brand-hover);
+  font-weight: 600;
+  flex: none;
+}
+
+/* O plano recomendado precisa se destacar sem gritar mais que o botão principal. */
+.plano--recomendado { border-color: var(--brand); border-width: 2px; }
+
+.plano__selo {
+  position: absolute;
+  top: -13px;
+  left: var(--space-4);
+  background-color: var(--brand-hover);
+  color: var(--surface);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px 12px;
+  border-radius: var(--radius-full);
+}
+
+/* ==========================================================================
+   Dúvidas frequentes
+   ========================================================================== */
+
+/*
+  <details>/<summary> nativo: acordeão sem uma linha de JavaScript, e que
+  funciona com leitor de tela e busca do navegador (Ctrl+F) por padrão.
+*/
+.faq__item {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+}
+
+.faq__pergunta {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 26px;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+/* O marcador nativo (triângulo do Chrome, losango do Safari) muda de navegador
+   para navegador — desenhamos o nosso, sempre igual, e escondemos o padrão. */
+.faq__pergunta::-webkit-details-marker { display: none; }
+.faq__pergunta::marker { content: ''; }
+
+.faq__pergunta::after {
+  content: '+';
+  font-family: var(--sans);
+  font-weight: 400;
+  font-size: 22px;
+  color: var(--ink-muted);
+  flex: none;
+  transition: transform .18s ease;
+}
+
+.faq__item[open] .faq__pergunta::after { content: '−'; }
+
+.faq__resposta { padding-top: var(--space-2); }
+
+/* ==========================================================================
+   Botão flutuante do WhatsApp
+   ========================================================================== */
+
+/*
+  O mesmo caminho de conversão do resto da página, só que sempre à mão
+  enquanto a pessoa rola. Cor oficial do WhatsApp aqui é proposital: é o selo
+  que a pessoa já reconhece de outros sites, e não é a cor da marca Omva —
+  então não entra em :root.
+*/
+.whats-flutuante {
+  position: fixed;
+  right: var(--space-4);
+  bottom: var(--space-4);
+  z-index: 20;
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-full);
+  background-color: #25d366;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, .2);
+  transition: transform .15s ease;
+}
+.whats-flutuante:hover { transform: scale(1.06); }
+
+/* ==========================================================================
    Chamada final
    ========================================================================== */
 
