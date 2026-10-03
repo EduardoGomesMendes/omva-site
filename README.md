@@ -2,11 +2,12 @@
 
 Página inicial da **Omva**, em `omva.com.br`.
 
-HTML e CSS puros, sem framework, sem build, sem dependência. São cinco arquivos:
+HTML e CSS puros, sem framework, sem build, sem dependência. São poucos arquivos:
 abrir o `index.html` no navegador já mostra o site exatamente como ele fica no ar.
 
 ```
 index.html                      a página
+vagas/index.html                página da oferta "10 vagas grátis no teste" (vem do Instagram)
 favicon.svg                     ícone da marca
 assets/css/omva.css             tokens da marca + estilos
 assets/img/omva-logotipo.svg    lockup (ícone + wordmark)
