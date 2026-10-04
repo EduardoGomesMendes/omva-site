@@ -807,3 +807,131 @@ a:focus-visible, button:focus-visible {
   .comparativo__rotulo { display: block; }
   .mini-linha span:first-child { flex-basis: 70px; }
 }
+
+/* ==========================================================================
+   Apresentação da Omva (empresa) e dos produtos
+   ========================================================================== */
+
+.produtos-lista { flex: 1 1 340px; min-width: 0; max-width: 460px; }
+
+.produto-destaque {
+  background-color: var(--surface);
+  border: 2px solid var(--brand);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  box-shadow: 0 8px 24px rgba(28, 25, 23, .06);
+}
+.produto-destaque:hover { border-color: var(--brand-hover); }
+.produto-destaque__selo {
+  align-self: flex-start;
+  background-color: var(--brand-tint);
+  color: var(--brand-hover);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px 12px;
+  border-radius: var(--radius-full);
+}
+.produto-destaque__nome { font-family: var(--display); font-weight: 600; font-size: 32px; line-height: 40px; letter-spacing: -0.01em; }
+.produto-breve {
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+}
+
+/* ==========================================================================
+   Carrossel de telas (rolagem horizontal com encaixe; setas e pontos via JS)
+   ========================================================================== */
+
+/*
+  Sem JavaScript o carrossel continua funcionando: é só uma faixa que rola de lado
+  (com o dedo, o mouse ou o teclado). As setas e os pontos são um extra.
+*/
+.carrossel { gap: var(--space-3); }
+
+.carrossel__faixa {
+  gap: var(--space-4);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: var(--space-1) var(--space-1) var(--space-3);
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+}
+.carrossel__faixa:focus-visible { outline: 3px solid var(--brand-hover); outline-offset: 2px; border-radius: var(--radius-md); }
+
+.tela.carrossel__slide {
+  flex: 0 0 min(400px, 86%);
+  scroll-snap-align: start;
+}
+
+.carrossel__controles { display: none; align-items: center; justify-content: center; gap: var(--space-3); }
+.js .carrossel__controles { display: flex; }
+
+.carrossel__seta {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border);
+  background-color: var(--surface);
+  color: var(--ink);
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+}
+.carrossel__seta:hover { border-color: var(--ink-muted); }
+.carrossel__seta:disabled { opacity: .4; cursor: default; }
+.carrossel__seta:focus-visible { outline: 3px solid var(--brand-hover); outline-offset: 3px; }
+
+.carrossel__pontos { gap: var(--space-2); align-items: center; }
+.carrossel__ponto {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border-radius: var(--radius-full);
+  border: 0;
+  background-color: var(--border);
+  cursor: pointer;
+}
+.carrossel__ponto[aria-current="true"] { background-color: var(--brand-hover); width: 24px; }
+.carrossel__ponto:focus-visible { outline: 3px solid var(--brand-hover); outline-offset: 3px; }
+
+/* --- Telas novas do carrossel: monitor do WhatsApp e follow-up --- */
+.mini-zap { border: 1px solid var(--border); border-radius: var(--radius-sm); overflow: hidden; min-height: 230px; }
+.mini-zap__lista { flex: 0 0 34%; border-right: 1px solid var(--border); background-color: var(--surface-alt); }
+.mini-zap__contato {
+  padding: 8px 10px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+  border-bottom: 1px solid var(--border);
+}
+.mini-zap__contato--ativo { background-color: var(--brand-tint); }
+.mini-zap__conversa { flex: 1; min-width: 0; padding: var(--space-2); gap: 6px; background-color: var(--zap-fundo); justify-content: center; }
+.mini-balao {
+  max-width: 88%;
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  line-height: 16px;
+  background-color: var(--surface);
+}
+.mini-balao--saida { align-self: flex-end; background-color: var(--zap-saida); }
+.mini-zap__autor { align-self: flex-end; font-size: 11px; line-height: 14px; font-weight: 600; color: var(--brand-hover); }
+.mini-zap__ticks { align-self: flex-end; font-size: 11px; line-height: 14px; color: var(--info); }
+
+.mini-abas { gap: var(--space-1); border-bottom: 1px solid var(--border); }
+.mini-aba { padding: 6px 10px; font-size: 12px; line-height: 16px; font-weight: 500; color: var(--ink-muted); border-bottom: 2px solid transparent; }
+.mini-aba--ativa { color: var(--ink); font-weight: 600; border-bottom-color: var(--brand); }
+.mini-item { border: 1px solid var(--border); border-radius: var(--radius-sm); padding: var(--space-2); gap: 2px; font-size: 13px; line-height: 18px; }
+.mini-selo {
+  flex: none;
+  padding: 1px 8px;
+  border-radius: var(--radius-full);
+  font-size: 11px;
+  line-height: 16px;
+  font-weight: 600;
+  background-color: var(--surface-alt);
+  color: var(--ink-muted);
+}
+.mini-selo--ok { background-color: var(--brand-tint); color: var(--brand-hover); }
+.mini-selo--alerta { background-color: var(--surface-alt); color: var(--warning); }

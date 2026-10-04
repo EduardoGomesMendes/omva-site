@@ -2,7 +2,14 @@
 
 Página inicial da **Omva**, em `omva.com.br`.
 
-HTML e CSS puros, sem framework, sem build, sem dependência. São poucos arquivos:
+A página apresenta primeiro a **empresa** (Omva: quem somos, o que acreditamos, produtos) e só depois o
+**produto** (omvazap: telas, recursos, planos, dúvidas). Os rótulos das seções do produto começam com
+"omvazap ·" para ficar claro de quem se fala. Quando houver um segundo produto, ele entra ao lado do
+omvazap na lista de produtos do topo.
+
+HTML e CSS puros, sem framework, sem build, sem dependência. O único JavaScript é um script curto no
+fim do `index.html` que liga as setas e os pontos do carrossel de telas (sem ele, a faixa continua
+rolando de lado com o dedo ou o mouse). São poucos arquivos:
 abrir o `index.html` no navegador já mostra o site exatamente como ele fica no ar.
 
 ```
