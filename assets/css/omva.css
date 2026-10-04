@@ -1066,3 +1066,34 @@ ol.passos { padding: 0; margin: 0; list-style: none; align-items: stretch; }
 .carrossel__pausa:hover { border-color: var(--ink-muted); }
 .carrossel__pausa:focus-visible { outline: 3px solid var(--brand-hover); outline-offset: 3px; }
 .carrossel__pausa[hidden] { display: none; }
+
+/* --- Telas do carrossel: assinatura (planos) e campanhas --- */
+.mini-aviso--alerta::before { background-color: var(--warning); }
+.mini-planos { gap: var(--space-2); }
+.mini-plano {
+  flex: 1 1 0;
+  min-width: 0;
+  position: relative;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-2);
+  gap: 2px;
+  font-size: 12px;
+  line-height: 16px;
+}
+.mini-plano--recomendado { border: 2px solid var(--brand); padding-top: var(--space-3); }
+.mini-plano__selo {
+  position: absolute;
+  top: -9px;
+  left: 6px;
+  padding: 0 8px;
+  border-radius: var(--radius-full);
+  background-color: var(--brand-hover);
+  color: var(--surface);
+  font-size: 10px;
+  line-height: 16px;
+  font-weight: 600;
+}
+.mini-plano__preco { font-family: var(--display); font-weight: 600; font-size: 18px; line-height: 24px; }
+.mini-plano__preco small { font-family: var(--sans); font-weight: 400; font-size: 11px; color: var(--ink-muted); }
+.mini-balao--cheio { max-width: 100%; align-self: stretch; }
