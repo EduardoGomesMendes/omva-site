@@ -1041,26 +1041,14 @@ ol.passos { padding: 0; margin: 0; list-style: none; align-items: stretch; }
   box-shadow: 0 12px 32px rgba(28, 25, 23, .12);
   z-index: 30;
 }
-.menu__item,
-.menu__subitem {
+.menu__item {
   display: flex;
   border-radius: var(--radius-sm);
   color: var(--ink);
 }
 .menu__item { padding: 10px var(--space-3); gap: 2px; }
 .menu__item strong { font-family: var(--display); font-weight: 600; font-size: 16px; line-height: 24px; }
-/* Os recursos ficam "dentro" do omvazap: recuados, com uma linha guia à esquerda. */
-.menu__subitem {
-  margin: 0 var(--space-2) 0 var(--space-4);
-  padding: 8px var(--space-3);
-  border-left: 2px solid var(--brand-tint);
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 500;
-  color: var(--ink-muted);
-}
-.menu__item:hover,
-.menu__subitem:hover { background-color: var(--surface-alt); color: var(--ink); }
+.menu__item:hover { background-color: var(--surface-alt); color: var(--ink); }
 
 /* Botão de pausa do carrossel (a troca automática precisa poder ser parada). */
 .carrossel__pausa {
