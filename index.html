@@ -24,7 +24,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/omva.css">
+  <link rel="stylesheet" href="assets/css/omva.css?v=20261004b">
   <script>document.documentElement.classList.add('js')</script>
 
   <!-- DADOS ESTRUTURADOS (gerados a partir do conteúdo desta página; ver README) -->
@@ -271,7 +271,7 @@
     <!-- ====================== Sobre a Omva ====================== -->
     <section class="secao secao--alt" id="sobre">
       <div class="envoltorio pilha gap-5">
-        <div class="pilha gap-3" style="max-width:620px">
+        <div class="pilha gap-3 cabecalho-secao">
           <p class="olho">Sobre a Omva</p>
           <h2 class="titulo-secao">Software que resolve, não que enfeita</h2>
           <p class="texto-grande suave">
@@ -395,7 +395,7 @@
     <section class="secao secao--alt" id="painel">
       <div class="envoltorio pilha gap-5">
 
-        <div class="pilha gap-3" style="max-width:620px">
+        <div class="pilha gap-3 cabecalho-secao">
           <p class="olho">omvazap · o painel por dentro</p>
           <h2 class="titulo-secao">Você abre o sistema e já sabe o que fazer</h2>
           <p class="texto-grande suave">
@@ -584,7 +584,7 @@
     <section class="secao" id="produto">
       <div class="envoltorio pilha gap-5">
 
-        <div class="pilha gap-3" style="max-width:620px">
+        <div class="pilha gap-3 cabecalho-secao">
           <p class="olho">omvazap · atendimento</p>
           <h2 class="titulo-secao">Um atendente que não dorme</h2>
           <p class="texto-grande suave">
@@ -688,7 +688,7 @@
     <section class="secao secao--alt" id="recursos">
       <div class="envoltorio pilha gap-5">
 
-        <div class="pilha gap-3" style="max-width:620px">
+        <div class="pilha gap-3 cabecalho-secao">
           <p class="olho">omvazap · além do atendimento</p>
           <h2 class="titulo-secao">Um CRM completo, não só um robô de chat</h2>
           <p class="texto-grande suave">
@@ -832,7 +832,7 @@
     <section class="secao" id="resultado">
       <div class="envoltorio pilha gap-5">
 
-        <div class="pilha gap-3" style="max-width:620px">
+        <div class="pilha gap-3 cabecalho-secao">
           <p class="olho">omvazap · nenhum cliente esquecido</p>
           <h2 class="titulo-secao">A venda não para quando o cliente some</h2>
           <p class="texto-grande suave">
@@ -937,7 +937,7 @@
     <section class="secao secao--alt" id="comparativo">
       <div class="envoltorio pilha gap-5">
 
-        <div class="pilha gap-3" style="max-width:620px">
+        <div class="pilha gap-3 cabecalho-secao">
           <p class="olho">omvazap · na prática</p>
           <h2 class="titulo-secao">Como é o dia a dia sem e com o omvazap</h2>
         </div>
@@ -997,7 +997,7 @@
     <!-- ====================== Flexível para o tamanho da operação ====================== -->
     <section class="secao">
       <div class="envoltorio pilha gap-5">
-        <div class="pilha gap-3" style="max-width:620px">
+        <div class="pilha gap-3 cabecalho-secao">
           <p class="olho">Sozinho ou em equipe</p>
           <h2 class="titulo-secao">Cresce junto com o seu negócio</h2>
         </div>
@@ -1025,7 +1025,7 @@
     <section class="secao secao--alt" id="como-funciona">
       <div class="envoltorio pilha gap-5">
 
-        <div class="pilha gap-3" style="max-width:620px">
+        <div class="pilha gap-3 cabecalho-secao">
           <p class="olho">Como funciona</p>
           <h2 class="titulo-secao">Três passos, e o resto acontece sozinho</h2>
         </div>
@@ -1064,7 +1064,7 @@
     <section class="secao" id="comecar">
       <div class="envoltorio pilha gap-5">
 
-        <div class="pilha gap-3" style="max-width:620px">
+        <div class="pilha gap-3 cabecalho-secao">
           <p class="olho">omvazap · começar é simples</p>
           <h2 class="titulo-secao">Do teste grátis à assinatura, sem surpresa</h2>
           <p class="texto-grande suave">
@@ -1072,35 +1072,39 @@
           </p>
         </div>
 
-        <div class="passos linha quebra">
-          <div class="passo pilha">
+        <ol class="passos linha quebra">
+          <li class="passo pilha">
+            <span class="passo__numero" aria-hidden="true">1</span>
             <span class="passo__quando">Hoje</span>
             <h3 class="titulo-card">Fale com a gente</h3>
             <p class="texto suave">Chame pelo WhatsApp, conte o que a sua empresa vende e liberamos o seu acesso de teste.</p>
-          </div>
-          <div class="passo pilha">
+          </li>
+          <li class="passo pilha">
+            <span class="passo__numero" aria-hidden="true">2</span>
             <span class="passo__quando">Mesmo dia</span>
             <h3 class="titulo-card">Conecte o seu número</h3>
             <p class="texto suave">Leia um QR Code com o celular, como no WhatsApp Web. O número é o seu; não muda nada para o cliente.</p>
-          </div>
-          <div class="passo pilha">
+          </li>
+          <li class="passo pilha">
+            <span class="passo__numero" aria-hidden="true">3</span>
             <span class="passo__quando">Primeiro dia</span>
             <h3 class="titulo-card">Descreva o negócio</h3>
             <p class="texto suave">Cadastre produtos, a equipe e o que o atendente deve descobrir. Se quiser, traga as conversas que já existem.</p>
-          </div>
-          <div class="passo pilha">
+          </li>
+          <li class="passo pilha">
+            <span class="passo__numero" aria-hidden="true">4</span>
             <span class="passo__quando">7 dias</span>
             <h3 class="titulo-card">Teste e decida</h3>
             <p class="texto suave">Use com clientes de verdade. Gostou? Escolha o plano e pague pelo painel. Não gostou? É só avisar.</p>
-          </div>
-        </div>
+          </li>
+        </ol>
       </div>
     </section>
 
     <!-- ====================== Planos ====================== -->
     <section class="secao secao--alt" id="planos">
       <div class="envoltorio pilha gap-5">
-        <div class="pilha gap-3" style="max-width:620px">
+        <div class="pilha gap-3 cabecalho-secao">
           <p class="olho">Planos do omvazap</p>
           <h2 class="titulo-secao">Todos os recursos, em todos os planos</h2>
           <p class="texto-grande suave">
@@ -1166,12 +1170,12 @@
     <!-- ====================== Segurança e transparência ====================== -->
     <section class="secao" id="seguranca">
       <div class="envoltorio pilha gap-5">
-        <div class="pilha gap-3" style="max-width:620px">
+        <div class="pilha gap-3 cabecalho-secao">
           <p class="olho">omvazap · segurança e transparência</p>
           <h2 class="titulo-secao">Você sabe o que o sistema faz — e o que ele não faz</h2>
         </div>
 
-        <div class="linha cards quebra">
+        <div class="linha cards cards--quatro quebra">
           <article class="card pilha">
             <h3 class="titulo-card">Cada empresa fica isolada</h3>
             <p class="texto suave">
@@ -1208,7 +1212,7 @@
     <!-- ====================== Dúvidas frequentes ====================== -->
     <section class="secao" id="duvidas">
       <div class="envoltorio pilha gap-5">
-        <div class="pilha gap-3" style="max-width:620px">
+        <div class="pilha gap-3 cabecalho-secao">
           <p class="olho">omvazap · dúvidas frequentes</p>
           <h2 class="titulo-secao">O que quase todo mundo pergunta antes de começar</h2>
         </div>

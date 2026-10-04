@@ -48,6 +48,13 @@ em acessibilidade para texto pequeno. Por isso botões e textos pequenos colorid
 `--brand-hover` (`#0f766e`, 5,47:1). O `--brand` fica para preenchimentos e textos
 grandes (24px+).
 
+## Cache do CSS
+
+A hospedagem manda o navegador guardar o CSS por 7 dias (`Cache-Control: max-age=604800`). Por isso o link do CSS
+nas páginas leva um número de versão (`omva.css?v=...`). **Toda vez que mudar o `omva.css`, troque esse número**
+no `index.html` e no `vagas/index.html`; senão quem já visitou o site recebe o HTML novo com o CSS antigo, e
+as partes novas aparecem sem estilo.
+
 ## Publicar
 
 O site é estático, então roda em qualquer hospedagem — inclusive a compartilhada.

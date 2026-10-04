@@ -935,3 +935,68 @@ a:focus-visible, button:focus-visible {
 }
 .mini-selo--ok { background-color: var(--brand-tint); color: var(--brand-hover); }
 .mini-selo--alerta { background-color: var(--surface-alt); color: var(--warning); }
+
+/* ==========================================================================
+   Organização: cabeçalhos centralizados, cards em linhas parelhas e passos em quadros
+   ========================================================================== */
+
+/* Título e apresentação de cada seção: centralizados e com largura de leitura confortável. */
+.cabecalho-secao {
+  max-width: 720px;
+  margin-inline: auto;
+  text-align: center;
+  align-items: center;
+}
+
+/* Três cards por linha em tela larga, sem sobras; a quebra é automática conforme a largura. */
+.cards > .card { flex: 1 1 calc((100% - 2 * var(--space-4)) / 3); min-width: 260px; }
+.cards--quatro > .card { flex-basis: calc((100% - var(--space-4)) / 2); }
+.cards .card .titulo-card { overflow-wrap: anywhere; }
+
+/* Hero da Omva: texto e cartão do produto bem distribuídos. */
+.hero__conteudo { justify-content: space-between; }
+
+/* Telas do carrossel um pouco maiores, para o conteúdo respirar. */
+.tela.carrossel__slide { flex-basis: min(420px, 86%); }
+
+/* --- Começar é simples: quatro quadros alinhados, cada um com o seu número --- */
+ol.passos { padding: 0; margin: 0; list-style: none; align-items: stretch; }
+.passo {
+  flex: 1 1 calc((100% - 3 * var(--space-4)) / 4);
+  min-width: 220px;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--brand);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  gap: var(--space-2);
+}
+.passo__numero {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  background-color: var(--brand-tint);
+  color: var(--brand-hover);
+  font-family: var(--display);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Tablet: duas colunas. Celular: uma. A quebra é automática, sem depender de um tamanho exato. */
+@media (max-width: 1000px) {
+  .cards > .card,
+  .passo { flex-basis: calc((100% - var(--space-4)) / 2); min-width: 0; }
+}
+@media (max-width: 620px) {
+  .cards > .card,
+  .cards--quatro > .card,
+  .passo { flex-basis: 100%; }
+}
+
+/* Planos: três lado a lado em tela larga; em tablet e celular, um embaixo do outro, centralizados. */
+@media (max-width: 1000px) {
+  #planos .cards { justify-content: center; }
+  #planos .cards > .card { flex: 0 1 520px; }
+}
