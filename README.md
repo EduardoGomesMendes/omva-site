@@ -14,6 +14,15 @@ assets/img/omva-logotipo.svg    lockup (ícone + wordmark)
 assets/img/omva-icone.svg       ícone isolado
 ```
 
+## Dados estruturados (SEO)
+
+O `<head>` do `index.html` tem dois blocos JSON-LD: o `SoftwareApplication` (com os três preços) e o `FAQPage`.
+Eles **espelham** o que está visível na página — as perguntas do FAQ e os valores dos planos. Ao mudar
+um preço ou uma pergunta, mude o bloco correspondente também; o Google ignora dado estruturado que
+diverge do texto da página.
+
+Os preços e os limites de usuários vêm do sistema (`src/crm/planos.js` do omvazap): mude lá primeiro.
+
 ## Identidade visual
 
 Os tokens em `:root` vêm do **design system da Omva** e devem ser alterados lá primeiro,
