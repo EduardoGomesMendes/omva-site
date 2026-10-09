@@ -4,8 +4,8 @@ Página inicial da **Omva**, em `omva.com.br`.
 
 A página apresenta primeiro a **empresa** (Omva: quem somos, o que acreditamos, produtos) e só depois o
 **produto** (omvazap: telas, recursos, planos, dúvidas). Os rótulos das seções do produto começam com
-"omvazap ·" para ficar claro de quem se fala. Quando houver um segundo produto, ele entra ao lado do
-omvazap na lista de produtos do topo.
+"omvazap ·" para ficar claro de quem se fala. O segundo produto, o **omvalic**, aparece ao lado do
+omvazap na lista de produtos do topo e no menu "Produtos", e tem página própria em `omvalic/`.
 
 HTML e CSS puros, sem framework, sem build, sem dependência. O único JavaScript é um script curto no
 fim do `index.html` que liga as setas e os pontos do carrossel de telas (sem ele, a faixa continua
@@ -15,6 +15,7 @@ abrir o `index.html` no navegador já mostra o site exatamente como ele fica no 
 ```
 index.html                      a página
 vagas/index.html                página da oferta "10 vagas grátis no teste" (vem do Instagram)
+omvalic/index.html              página do segundo produto (licitações + resumo de edital por IA)
 favicon.svg                     ícone da marca
 assets/css/omva.css             tokens da marca + estilos
 assets/img/omva-logotipo.svg    lockup (ícone + wordmark)
@@ -48,17 +49,28 @@ em acessibilidade para texto pequeno. Por isso botões e textos pequenos colorid
 `--brand-hover` (`#0f766e`, 5,47:1). O `--brand` fica para preenchimentos e textos
 grandes (24px+).
 
+## Página do omvalic
+
+Estado do produto: **em produção, testes em breve** (ainda não há cadastro nem preço). Por isso a página
+não tem botão de "testar grátis": o botão leva ao WhatsApp com a mensagem `(#OMVALIC)`, e a origem
+`omvalic` precisa existir na empresa Omva no omvazap para a conversa chegar identificada.
+
+A página separa **"Funciona hoje"** de **"Planejado"** (selos `selo-estado`). Ao entregar uma função planejada,
+troque o selo e mova o card para a seção "o que já funciona"; ao liberar os testes, troque o selo do topo,
+os textos "em breve" e o card em `index.html`. O JSON-LD do omvalic não tem `offers` de propósito: só
+acrescente quando houver preço visível na página.
+
 ## Cache do CSS
 
 A hospedagem manda o navegador guardar o CSS por 7 dias (`Cache-Control: max-age=604800`). Por isso o link do CSS
 nas páginas leva um número de versão (`omva.css?v=...`). **Toda vez que mudar o `omva.css`, troque esse número**
-no `index.html` e no `vagas/index.html`; senão quem já visitou o site recebe o HTML novo com o CSS antigo, e
+no `index.html`, no `vagas/index.html` e no `omvalic/index.html`; senão quem já visitou o site recebe o HTML novo com o CSS antigo, e
 as partes novas aparecem sem estilo.
 
 ## Publicar
 
 O site é estático, então roda em qualquer hospedagem — inclusive a compartilhada.
-Basta copiar os cinco arquivos para a pasta pública do domínio (`public_html`),
+Basta copiar os arquivos para a pasta pública do domínio (`public_html`),
 mantendo a estrutura de pastas.
 
 ## Relação com o omvazap

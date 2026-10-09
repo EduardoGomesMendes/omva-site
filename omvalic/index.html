@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>omvalic — licitações com resumo de edital por IA — Omva</title>
+  <meta name="description" content="O omvalic encontra licitações abertas no PNCP, filtra pelo que a sua empresa vende e resume o edital com inteligência artificial: exigências, documentos a preparar e pontos de atenção. Em produção, testes em breve.">
+
+  <!-- Como o link aparece quando alguém compartilha a página no WhatsApp ou em qualquer outro lugar. -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Omva">
+  <meta property="og:url" content="https://omva.com.br/omvalic/">
+  <meta property="og:title" content="omvalic — ache a licitação certa e entenda o edital em minutos">
+  <meta property="og:description" content="Licitações abertas do PNCP com resumo do edital por IA. Em produção, testes em breve.">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="canonical" href="https://omva.com.br/omvalic/">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/omva.css?v=20261008a">
+
+  <!-- DADOS ESTRUTURADOS: espelham o texto desta página (ver README). Sem "offers": o preço ainda não existe. -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "omvalic",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Navegador web",
+  "description": "Busca licitações abertas no PNCP e resume o edital com inteligência artificial: exigências de habilitação, documentos a preparar e pontos de atenção.",
+  "url": "https://omva.com.br/omvalic/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Omva",
+    "url": "https://omva.com.br/"
+  }
+}
+  </script>
+</head>
+<body class="com-cta-fixo">
+
+  <!--
+    Todo botão desta página abre a MESMA mensagem no WhatsApp: "Quero ser avisado quando o teste do omvalic
+    abrir (#OMVALIC)". O código #OMVALIC é o que o omvazap usa para saber que a pessoa veio desta página:
+    cadastre a origem "omvalic" na empresa Omva, senão a conversa chega sem origem.
+  -->
+
+  <!-- ====================== Cabeçalho ====================== -->
+  <header class="topo">
+    <div class="envoltorio linha centro entre topo__interno gap-3">
+      <a href="/" aria-label="Omva, página inicial">
+        <img class="topo__logo" src="../assets/img/omva-logotipo.svg" alt="Omva">
+      </a>
+
+      <nav class="linha topo__nav" aria-label="Principal">
+        <a class="topo__link esconde-mobile" href="/#sobre">A Omva</a>
+        <a class="topo__link esconde-mobile" href="/#omvazap">omvazap</a>
+        <a class="topo__link esconde-mobile" href="#funcoes">Funções</a>
+        <a class="topo__link esconde-mobile" href="#duvidas">Dúvidas</a>
+        <a class="botao botao--principal botao--compacto" href="https://wa.me/552431920676?text=Quero%20ser%20avisado%20quando%20o%20teste%20do%20omvalic%20abrir%20(%23OMVALIC)" rel="noopener">Quero testar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ====================== Hero ====================== -->
+    <section class="hero hero--vagas">
+      <div class="envoltorio linha hero__conteudo quebra empilha">
+
+        <div class="pilha gap-4 hero__texto">
+          <span class="selo-oferta">Em produção · liberado para testes em breve</span>
+          <h1 class="titulo-hero">Ache a licitação certa. Entenda o edital em minutos.</h1>
+          <p class="texto-grande suave">
+            O omvalic busca licitações abertas no PNCP, filtra pelo que a sua empresa vende e resume o
+            edital com inteligência artificial: o que exigem, quais documentos preparar e onde está o risco.
+          </p>
+          <div class="pilha gap-2">
+            <a class="botao botao--principal botao--grande" href="https://wa.me/552431920676?text=Quero%20ser%20avisado%20quando%20o%20teste%20do%20omvalic%20abrir%20(%23OMVALIC)" rel="noopener">Quero ser avisado quando abrir</a>
+            <p class="texto-apoio">Os testes ainda não abriram · avisamos você pelo WhatsApp quando abrirem</p>
+          </div>
+        </div>
+
+        <!-- Exemplo ilustrativo: mostra o formato do resumo, não é um edital real -->
+        <div class="pilha gap-2" style="align-items:center">
+          <div class="exemplo pilha" role="img" aria-label="Exemplo ilustrativo de resumo: checklist de documentos de habilitação e um alerta sobre prazo curto para enviar os documentos">
+            <div class="pilha gap-1">
+              <span class="legenda">Pregão eletrônico · materiais elétricos</span>
+              <strong class="titulo-card">Exigências de habilitação</strong>
+            </div>
+            <ul class="pilha gap-2">
+              <li class="linha exemplo__item"><span class="exemplo__caixa" aria-hidden="true"></span><span class="texto">Certidão conjunta de tributos federais <span class="legenda">(item 8.5)</span></span></li>
+              <li class="linha exemplo__item"><span class="exemplo__caixa" aria-hidden="true"></span><span class="texto">Certificado de regularidade do FGTS <span class="legenda">(item 8.5)</span></span></li>
+              <li class="linha exemplo__item"><span class="exemplo__caixa" aria-hidden="true"></span><span class="texto">Declaração unificada assinada <span class="legenda">(anexo IV)</span></span></li>
+            </ul>
+            <p class="texto exemplo__alerta"><strong>Atenção:</strong> prazo de 2 horas para enviar os documentos depois de convocado.</p>
+            <p class="legenda">Dificuldade para empresa pequena: <strong>baixa a média</strong></p>
+          </div>
+          <p class="legenda">Exemplo ilustrativo do formato do resumo.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================== Fatos ====================== -->
+    <section class="secao secao--alt" style="padding-block:40px">
+      <div class="envoltorio linha fatos quebra">
+        <div class="fato pilha">
+          <span class="fato__valor">PNCP</span>
+          <span class="texto-apoio">portal oficial onde a Lei 14.133 manda publicar as licitações</span>
+        </div>
+        <div class="fato pilha">
+          <span class="fato__valor">Item citado</span>
+          <span class="texto-apoio">cada informação do resumo aponta o trecho do edital, para você conferir</span>
+        </div>
+        <div class="fato pilha">
+          <span class="fato__valor">Em breve</span>
+          <span class="texto-apoio">liberação dos primeiros testes</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== A dor ====================== -->
+    <section class="secao">
+      <div class="envoltorio pilha gap-5">
+
+        <div class="pilha gap-3" style="max-width:660px">
+          <p class="olho">O que custa caro</p>
+          <h2 class="titulo-secao">Quem vende para o governo perde tempo antes mesmo de vender</h2>
+          <p class="texto-grande suave">
+            Achar a licitação certa no meio de milhares, ler o edital inteiro para descobrir se a empresa
+            atende e correr atrás dos documentos. Quando o prazo aperta, quem se organizou primeiro leva vantagem.
+          </p>
+        </div>
+
+        <div class="linha contraste quebra">
+
+          <div class="pilha contraste__lado">
+            <h3 class="titulo-card">Sem o omvalic</h3>
+            <ul class="pilha gap-2">
+              <li class="linha gap-2"><span class="contraste__marca contraste__marca--nao" aria-hidden="true">✕</span><span class="texto">Licitação nova some no meio de milhares, e o prazo passa</span></li>
+              <li class="linha gap-2"><span class="contraste__marca contraste__marca--nao" aria-hidden="true">✕</span><span class="texto">Ler o edital inteiro só para saber se a empresa atende</span></li>
+              <li class="linha gap-2"><span class="contraste__marca contraste__marca--nao" aria-hidden="true">✕</span><span class="texto">Lista de documentos montada à mão, a cada licitação</span></li>
+              <li class="linha gap-2"><span class="contraste__marca contraste__marca--nao" aria-hidden="true">✕</span><span class="texto">Cláusula incomum que só aparece depois de perder a disputa</span></li>
+            </ul>
+          </div>
+
+          <div class="pilha contraste__lado contraste__lado--com">
+            <h3 class="titulo-card">Com o omvalic</h3>
+            <ul class="pilha gap-2">
+              <li class="linha gap-2"><span class="contraste__marca contraste__marca--sim" aria-hidden="true">✓</span><span class="texto">Busca no PNCP pelo que você vende, com o prazo em destaque</span></li>
+              <li class="linha gap-2"><span class="contraste__marca contraste__marca--sim" aria-hidden="true">✓</span><span class="texto">Resumo do edital com exigências e riscos, citando o item</span></li>
+              <li class="linha gap-2"><span class="contraste__marca contraste__marca--sim" aria-hidden="true">✓</span><span class="texto">Checklist de habilitação e documentos a preparar já montados</span></li>
+              <li class="linha gap-2"><span class="contraste__marca contraste__marca--sim" aria-hidden="true">✓</span><span class="texto">Pontos de atenção antes de decidir se vale participar</span></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== O que funciona hoje ====================== -->
+    <section class="secao secao--alt" id="funcoes">
+      <div class="envoltorio pilha gap-5">
+
+        <div class="pilha gap-3" style="max-width:660px">
+          <p class="olho">omvalic · o que já funciona</p>
+          <h2 class="titulo-secao">Da busca ao resumo, numa tela só</h2>
+          <p class="texto-grande suave">
+            Estas funções já rodam no sistema. Os testes com clientes ainda não abriram, e a seção
+            seguinte mostra o que vem depois.
+          </p>
+        </div>
+
+        <div class="linha cards quebra">
+
+          <article class="card pilha">
+            <span class="selo-estado">Funciona hoje</span>
+            <span class="selo-icone" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path>
+              </svg>
+            </span>
+            <h3 class="titulo-card">Busca de licitações abertas</h3>
+            <p class="texto suave">
+              Procure pelo que a sua empresa vende, por estado e por modalidade. Singular e plural valem
+              igual, e o prazo aparece em verde, amarelo ou vermelho. As licitações já encerradas ficam de fora.
+            </p>
+          </article>
+
+          <article class="card pilha">
+            <span class="selo-estado">Funciona hoje</span>
+            <span class="selo-icone" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"></path><path d="M14 3v5h5"></path><path d="M9 13h6M9 17h4"></path>
+              </svg>
+            </span>
+            <h3 class="titulo-card">Resumo do edital por IA</h3>
+            <p class="texto suave">
+              O edital em PDF vira um resumo em 3 linhas, com dados-chave, itens e quantidades, exigências de
+              habilitação em checklist, pontos de atenção, documentos a preparar e o nível de dificuldade.
+            </p>
+          </article>
+
+          <article class="card pilha">
+            <span class="selo-estado">Funciona hoje</span>
+            <span class="selo-icone" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 12l2 2 4-4"></path>
+              </svg>
+            </span>
+            <h3 class="titulo-card">Mostra onde está, e o que não está</h3>
+            <p class="texto suave">
+              Cada informação cita o item do edital. O que o edital não traz aparece como “não consta no
+              edital”, em vez de inventado. Divergências entre o edital e o PNCP também são apontadas.
+            </p>
+          </article>
+
+          <article class="card pilha">
+            <span class="selo-estado">Funciona hoje</span>
+            <span class="selo-icone" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path>
+              </svg>
+            </span>
+            <h3 class="titulo-card">Histórico de resumos</h3>
+            <p class="texto suave">
+              Os editais que você já resumiu ficam salvos. Volte a eles quando quiser e filtre por órgão, cidade ou objeto.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== O que esperamos ====================== -->
+    <section class="secao">
+      <div class="envoltorio pilha gap-5">
+
+        <div class="pilha gap-3" style="max-width:660px">
+          <p class="olho">omvalic · o que esperamos dele</p>
+          <h2 class="titulo-secao">Do resumo ao acompanhamento da disputa</h2>
+          <p class="texto-grande suave">
+            O resumo é o primeiro passo. A ideia é cobrir a rotina de quem disputa licitação, do aviso
+            ao resultado. Estas funções estão planejadas, ainda sem data, e a ordem depende do que os
+            primeiros testes mostrarem.
+          </p>
+        </div>
+
+        <div class="linha cards quebra">
+
+          <article class="card pilha">
+            <span class="selo-estado selo-estado--planejado">Planejado</span>
+            <h3 class="titulo-card">Alertas no WhatsApp</h3>
+            <p class="texto suave">
+              Avisar quando sair uma licitação do seu ramo, sem você precisar abrir o sistema para procurar.
+            </p>
+          </article>
+
+          <article class="card pilha">
+            <span class="selo-estado selo-estado--planejado">Planejado</span>
+            <h3 class="titulo-card">Funil de licitações</h3>
+            <p class="texto suave">
+              Oportunidade, análise, proposta, disputa e resultado, com os prazos e os documentos a vencer em um só lugar.
+            </p>
+          </article>
+
+          <article class="card pilha">
+            <span class="selo-estado selo-estado--planejado">Planejado</span>
+            <h3 class="titulo-card">Preços de referência</h3>
+            <p class="texto suave">
+              Histórico de preços praticados por item e por órgão, para ajudar a decidir o lance.
+            </p>
+          </article>
+
+          <article class="card pilha">
+            <span class="selo-estado selo-estado--planejado">Planejado</span>
+            <h3 class="titulo-card">Mais formatos de edital</h3>
+            <p class="texto suave">
+              Hoje o resumo lê editais em PDF. Editais compactados em .zip são o próximo formato.
+            </p>
+          </article>
+
+          <article class="card pilha">
+            <span class="selo-estado selo-estado--planejado">Planejado</span>
+            <h3 class="titulo-card">Mais portais</h3>
+            <p class="texto suave">
+              Além do PNCP, cobrir portais onde algumas licitações são publicadas fora dele.
+            </p>
+          </article>
+
+          <article class="card pilha">
+            <span class="selo-estado selo-estado--planejado">Planejado</span>
+            <h3 class="titulo-card">Equipe com acesso próprio</h3>
+            <p class="texto suave">
+              Cada pessoa com o seu login, e o gestor decidindo quem vê o quê.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== Para quem é ====================== -->
+    <section class="secao secao--alt">
+      <div class="envoltorio pilha gap-5">
+
+        <div class="pilha gap-3" style="max-width:660px">
+          <p class="olho">Para quem é</p>
+          <h2 class="titulo-secao">Empresas que já vendem, ou querem vender, para o governo</h2>
+          <p class="texto-grande suave">
+            Fornecedores de produtos e prestadores de serviço, de MEI a empresa de médio porte, que
+            precisam decidir rápido se uma licitação vale o esforço.
+          </p>
+        </div>
+
+        <div class="linha cards quebra">
+          <article class="card card--limpo pilha gap-2">
+            <span class="numero">01</span>
+            <h3 class="titulo-card">Peça para ser avisado</h3>
+            <p class="texto suave">
+              Um toque no botão e a mensagem já vai pronta. É assim que sabemos que você veio desta página.
+            </p>
+          </article>
+
+          <article class="card card--limpo pilha gap-2">
+            <span class="numero">02</span>
+            <h3 class="titulo-card">Liberamos o seu teste</h3>
+            <p class="texto suave">
+              Quando os testes abrirem, você recebe o acesso e conta o que a sua empresa vende.
+            </p>
+          </article>
+
+          <article class="card card--limpo pilha gap-2">
+            <span class="numero">03</span>
+            <h3 class="titulo-card">Busque, resuma e confira</h3>
+            <p class="texto suave">
+              Use com as licitações reais da sua empresa e nos diga o que ajudou e o que faltou.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== Dúvidas ====================== -->
+    <section class="secao" id="duvidas">
+      <div class="envoltorio pilha gap-5">
+        <div class="pilha gap-3" style="max-width:660px">
+          <p class="olho">Dúvidas</p>
+          <h2 class="titulo-secao">O que vale saber antes de pedir para testar</h2>
+        </div>
+
+        <div class="pilha gap-3 faq" style="max-width:760px">
+
+          <details class="faq__item">
+            <summary class="faq__pergunta">Já posso testar o omvalic?</summary>
+            <p class="texto suave faq__resposta">
+              Ainda não. O omvalic está em produção e vamos liberar para testes em breve. Quem pedir para
+              ser avisado recebe uma mensagem no WhatsApp quando os testes abrirem.
+            </p>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__pergunta">Quanto vai custar?</summary>
+            <p class="texto suave faq__resposta">
+              O preço ainda não foi definido. Quando os testes abrirem, você saberá o que está incluído
+              antes de decidir qualquer coisa.
+            </p>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__pergunta">De onde vêm as licitações?</summary>
+            <p class="texto suave faq__resposta">
+              Do PNCP, o Portal Nacional de Contratações Públicas, onde a Nova Lei de Licitações (14.133)
+              manda publicar. Licitações divulgadas só em outros portais podem não aparecer por enquanto.
+            </p>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__pergunta">A IA substitui a leitura do edital, ou um advogado?</summary>
+            <p class="texto suave faq__resposta">
+              Não. O resumo é um apoio à leitura e pode errar ou deixar passar uma cláusula. Por isso ele
+              cita o item do edital, para você conferir no original antes de decidir. Ele não é parecer jurídico.
+            </p>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__pergunta">O que acontece com o edital que eu resumo?</summary>
+            <p class="texto suave faq__resposta">
+              Editais são documentos públicos. Para resumir, o conteúdo do edital é enviado a um serviço
+              de inteligência artificial (a Anthropic), que devolve o texto do resumo.
+            </p>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__pergunta">Preciso ter o omvazap?</summary>
+            <p class="texto suave faq__resposta">
+              Não. O omvalic é um produto separado do omvazap, e um não depende do outro.
+            </p>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== Chamada final ====================== -->
+    <section class="secao secao--alt">
+      <div class="envoltorio">
+        <div class="chamada pilha">
+          <h2 class="titulo-secao">Quer ser dos primeiros a testar?</h2>
+          <p class="texto-grande suave" style="max-width:540px">
+            Peça para ser avisado e a gente chama você quando os testes do omvalic abrirem.
+          </p>
+          <div class="linha gap-3 quebra" style="justify-content:center">
+            <a class="botao botao--principal botao--grande" href="https://wa.me/552431920676?text=Quero%20ser%20avisado%20quando%20o%20teste%20do%20omvalic%20abrir%20(%23OMVALIC)" rel="noopener">Quero ser avisado</a>
+            <a class="botao botao--secundario" href="mailto:contato@omva.com.br">contato@omva.com.br</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Barra fixa no celular: o caminho de conversão nunca sai da tela. -->
+  <div class="cta-fixo">
+    <a class="botao botao--principal botao--grande" href="https://wa.me/552431920676?text=Quero%20ser%20avisado%20quando%20o%20teste%20do%20omvalic%20abrir%20(%23OMVALIC)" rel="noopener">Quero ser avisado quando abrir</a>
+  </div>
+
+  <!-- ====================== Rodapé ====================== -->
+  <footer class="rodape">
+    <div class="envoltorio linha centro entre quebra gap-3 empilha">
+      <div class="pilha gap-2">
+        <img class="rodape__logo" src="../assets/img/omva-logotipo.svg" alt="Omva">
+        <p class="texto-apoio">Atendimento contínuo, sempre.</p>
+      </div>
+
+      <div class="linha gap-4 quebra centro">
+        <a class="topo__link" href="/">Conhecer a Omva</a>
+        <a class="topo__link" href="https://wa.me/552431920676" rel="noopener">(24) 3192-0676</a>
+        <a class="topo__link" href="mailto:contato@omva.com.br">contato@omva.com.br</a>
+        <span class="texto-apoio">© 2026 Omva</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
