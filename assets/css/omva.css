@@ -1047,6 +1047,9 @@ ol.passos { padding: 0; margin: 0; list-style: none; align-items: stretch; }
   color: var(--ink);
 }
 .menu__item { padding: 10px var(--space-3); gap: 2px; }
+/* "Entrar" fica no canto direito do topo: o painel abre para a esquerda para não sair da tela no celular. */
+.menu__painel--direita { left: auto; right: 0; transform: none; min-width: 280px; }
+.menu__rotulo { padding: 6px var(--space-3) 4px; font-size: 12px; font-weight: 600; letter-spacing: .02em; color: var(--ink-muted); }
 .menu__item strong { font-family: var(--display); font-weight: 600; font-size: 16px; line-height: 24px; }
 .menu__item:hover { background-color: var(--surface-alt); color: var(--ink); }
 

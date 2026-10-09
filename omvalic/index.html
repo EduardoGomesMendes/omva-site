@@ -60,6 +60,20 @@
         <a class="topo__link esconde-mobile" href="/#omvazap">omvazap</a>
         <a class="topo__link esconde-mobile" href="#funcoes">Funções</a>
         <a class="topo__link esconde-mobile" href="#duvidas">Dúvidas</a>
+        <details class="menu menu--entrar" data-menu>
+          <summary class="topo__link menu__titulo">Entrar</summary>
+          <div class="menu__painel menu__painel--direita pilha">
+            <p class="menu__rotulo">Já é cliente? Escolha o sistema</p>
+            <a class="menu__item pilha" href="https://omvazap.omva.com.br">
+              <strong>omvazap</strong>
+              <span class="legenda">Atendimento e vendas no WhatsApp</span>
+            </a>
+            <a class="menu__item pilha" href="https://omvalic.omva.com.br">
+              <strong>omvalic</strong>
+              <span class="legenda">Licitações e análise de editais</span>
+            </a>
+          </div>
+        </details>
         <a class="botao botao--principal botao--compacto" href="https://wa.me/552431920676?text=Quero%20ser%20avisado%20quando%20o%20teste%20do%20omvalic%20abrir%20(%23OMVALIC)" rel="noopener">Quero testar</a>
       </nav>
     </div>
@@ -439,12 +453,35 @@
 
       <div class="linha gap-4 quebra centro">
         <a class="topo__link" href="/">Conhecer a Omva</a>
+        <a class="topo__link" href="https://omvazap.omva.com.br">Entrar no omvazap</a>
+        <a class="topo__link" href="https://omvalic.omva.com.br">Entrar no omvalic</a>
         <a class="topo__link" href="https://wa.me/552431920676" rel="noopener">(24) 3192-0676</a>
         <a class="topo__link" href="mailto:contato@omva.com.br">contato@omva.com.br</a>
         <span class="texto-apoio">© 2026 Omva</span>
       </div>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      /* ---- Menus (produtos e entrar): fecham ao clicar fora, em um link ou com Esc; abrir um fecha o outro ---- */
+      var menus = Array.prototype.slice.call(document.querySelectorAll('[data-menu]'));
+      if (menus.length) {
+        document.addEventListener('click', function (e) {
+          menus.forEach(function (m) { if (!m.contains(e.target)) m.open = false; });
+        });
+        menus.forEach(function (m) {
+          m.addEventListener('click', function (e) { if (e.target.closest('a')) m.open = false; });
+          m.addEventListener('toggle', function () {
+            if (m.open) menus.forEach(function (outro) { if (outro !== m) outro.open = false; });
+          });
+        });
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') menus.forEach(function (m) { m.open = false; });
+        });
+      }
+    })();
+  </script>
 
 </body>
 </html>
