@@ -57,7 +57,9 @@ JSON-LD do omvalic tem os três `offers` com os mesmos valores. Os preços e os 
 mude lá primeiro e depois aqui, no card, na pergunta "Quanto vai custar?" e no JSON-LD.
 
 A página separa **"Funciona hoje"** de **"Planejado"** (selos `selo-estado`). Ao entregar uma função planejada,
-troque o selo e mova o card para a seção "o que já funciona".
+troque o selo e mova o card para a seção "o que já funciona". Em 2026-10-10 foram movidos para "funciona hoje": alertas no WhatsApp,
+funil, checklist de documentos, conversas no WhatsApp, equipe com acesso próprio, leitura de ZIP/Word/planilha e a marca da empresa.
+Só "preços de referência", "mais portais", "pagamento online" e "áudio nas conversas" seguem como planejados.
 
 ## Cache do CSS
 
