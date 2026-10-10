@@ -51,14 +51,13 @@ grandes (24px+).
 
 ## Página do omvalic
 
-Estado do produto: **em produção, testes em breve** (ainda não há cadastro nem preço). Por isso a página
-não tem botão de "testar grátis": o botão leva ao WhatsApp com a mensagem `(#OMVALIC)`, e a origem
-`omvalic` precisa existir na empresa Omva no omvazap para a conversa chegar identificada.
+Estado do produto: **no ar, com teste grátis de 7 dias**. Todo botão de ação leva ao cadastro do sistema
+(`https://omvalic.omva.com.br/cadastro/`). A seção **Planos** traz os preços (R$ 97, R$ 197 e R$ 397 por mês; anual = 10 meses) e o
+JSON-LD do omvalic tem os três `offers` com os mesmos valores. Os preços e os limites vêm do sistema (`src/conta/planos.js` do omvalic):
+mude lá primeiro e depois aqui, no card, na pergunta "Quanto vai custar?" e no JSON-LD.
 
 A página separa **"Funciona hoje"** de **"Planejado"** (selos `selo-estado`). Ao entregar uma função planejada,
-troque o selo e mova o card para a seção "o que já funciona"; ao liberar os testes, troque o selo do topo,
-os textos "em breve" e o card em `index.html`. O JSON-LD do omvalic não tem `offers` de propósito: só
-acrescente quando houver preço visível na página.
+troque o selo e mova o card para a seção "o que já funciona".
 
 ## Cache do CSS
 

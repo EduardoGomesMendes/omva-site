@@ -22,7 +22,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/omva.css?v=20261008a">
 
-  <!-- DADOS ESTRUTURADOS: espelham o texto desta página (ver README). Sem "offers": o preço ainda não existe. -->
+  <!-- DADOS ESTRUTURADOS: espelham o texto desta página (ver README), inclusive os preços da seção Planos. -->
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -32,6 +32,11 @@
   "operatingSystem": "Navegador web",
   "description": "Busca licitações abertas no PNCP e resume o edital com inteligência artificial: exigências de habilitação, documentos a preparar e pontos de atenção.",
   "url": "https://omva.com.br/omvalic/",
+  "offers": [
+    { "@type": "Offer", "name": "Essencial", "price": "97.00", "priceCurrency": "BRL", "url": "https://omva.com.br/omvalic/#planos" },
+    { "@type": "Offer", "name": "Profissional", "price": "197.00", "priceCurrency": "BRL", "url": "https://omva.com.br/omvalic/#planos" },
+    { "@type": "Offer", "name": "Avançado", "price": "397.00", "priceCurrency": "BRL", "url": "https://omva.com.br/omvalic/#planos" }
+  ],
   "publisher": {
     "@type": "Organization",
     "name": "Omva",
@@ -58,6 +63,7 @@
         <a class="topo__link esconde-mobile" href="/#sobre">A Omva</a>
         <a class="topo__link esconde-mobile" href="/#omvazap">omvazap</a>
         <a class="topo__link esconde-mobile" href="#funcoes">Funções</a>
+        <a class="topo__link esconde-mobile" href="#planos">Planos</a>
         <a class="topo__link esconde-mobile" href="#duvidas">Dúvidas</a>
         <details class="menu menu--entrar" data-menu>
           <summary class="topo__link menu__titulo">Entrar</summary>
@@ -358,6 +364,68 @@
       </div>
     </section>
 
+    <!-- ====================== Planos ====================== -->
+    <section class="secao secao--alt" id="planos">
+      <div class="envoltorio pilha gap-5">
+        <div class="pilha gap-3 cabecalho-secao">
+          <p class="olho">Planos do omvalic</p>
+          <h2 class="titulo-secao">Todas as funções em todos os planos</h2>
+          <p class="texto-grande suave">
+            O plano muda só pelo número de pessoas e de análises de edital por mês. Todo mundo começa com 7 dias de teste grátis,
+            sem cartão de crédito.
+          </p>
+        </div>
+
+        <div class="linha cards quebra">
+          <article class="card pilha plano">
+            <h3 class="titulo-card">Essencial</h3>
+            <p class="texto-apoio">Para quem está começando a disputar licitações</p>
+            <p class="preco linha"><span class="preco__valor">R$ 97</span><span class="preco__periodo">/mês</span></p>
+            <p class="texto-apoio">ou R$ 970 por ano (2 meses grátis)</p>
+            <ul class="pilha gap-2 plano__lista">
+              <li class="linha gap-2"><span class="plano__check" aria-hidden="true">✓</span><span class="texto">Até 2 usuários</span></li>
+              <li class="linha gap-2"><span class="plano__check" aria-hidden="true">✓</span><span class="texto">30 análises de edital por mês</span></li>
+              <li class="linha gap-2"><span class="plano__check" aria-hidden="true">✓</span><span class="texto">Funil, checklist de documentos e alertas</span></li>
+              <li class="linha gap-2"><span class="plano__check" aria-hidden="true">✓</span><span class="texto">Conversas e avisos no WhatsApp da empresa</span></li>
+            </ul>
+            <a class="botao botao--secundario" href="https://omvalic.omva.com.br/cadastro/">Testar grátis por 7 dias</a>
+          </article>
+
+          <article class="card pilha plano plano--recomendado">
+            <span class="plano__selo">Mais escolhido</span>
+            <h3 class="titulo-card">Profissional</h3>
+            <p class="texto-apoio">Para empresas que disputam todo mês</p>
+            <p class="preco linha"><span class="preco__valor">R$ 197</span><span class="preco__periodo">/mês</span></p>
+            <p class="texto-apoio">ou R$ 1.970 por ano (2 meses grátis)</p>
+            <ul class="pilha gap-2 plano__lista">
+              <li class="linha gap-2"><span class="plano__check" aria-hidden="true">✓</span><span class="texto">Até 5 usuários</span></li>
+              <li class="linha gap-2"><span class="plano__check" aria-hidden="true">✓</span><span class="texto">100 análises de edital por mês</span></li>
+              <li class="linha gap-2"><span class="plano__check" aria-hidden="true">✓</span><span class="texto">Tudo do Essencial</span></li>
+            </ul>
+            <a class="botao botao--principal" href="https://omvalic.omva.com.br/cadastro/">Testar grátis por 7 dias</a>
+          </article>
+
+          <article class="card pilha plano">
+            <h3 class="titulo-card">Avançado</h3>
+            <p class="texto-apoio">Para equipes que acompanham muitas licitações</p>
+            <p class="preco linha"><span class="preco__valor">R$ 397</span><span class="preco__periodo">/mês</span></p>
+            <p class="texto-apoio">ou R$ 3.970 por ano (2 meses grátis)</p>
+            <ul class="pilha gap-2 plano__lista">
+              <li class="linha gap-2"><span class="plano__check" aria-hidden="true">✓</span><span class="texto">Até 15 usuários</span></li>
+              <li class="linha gap-2"><span class="plano__check" aria-hidden="true">✓</span><span class="texto">300 análises de edital por mês</span></li>
+              <li class="linha gap-2"><span class="plano__check" aria-hidden="true">✓</span><span class="texto">Tudo do Profissional</span></li>
+            </ul>
+            <a class="botao botao--secundario" href="https://omvalic.omva.com.br/cadastro/">Testar grátis por 7 dias</a>
+          </article>
+        </div>
+
+        <p class="texto-apoio">
+          Uma análise corresponde a um edital comum. Edital com anexos muito grandes (a cada 200 mil tokens de texto) conta mais de uma, e
+          você é avisado antes de gastar. A análise detalhada, opcional, conta como 4.
+        </p>
+      </div>
+    </section>
+
     <!-- ====================== Dúvidas ====================== -->
     <section class="secao" id="duvidas">
       <div class="envoltorio pilha gap-5">
@@ -379,8 +447,8 @@
           <details class="faq__item">
             <summary class="faq__pergunta">Quanto vai custar?</summary>
             <p class="texto suave faq__resposta">
-              O teste de 7 dias é grátis e não pede cartão de crédito. Os planos e preços ainda estão sendo
-              definidos: você saberá o que está incluído antes de decidir qualquer coisa.
+              O teste de 7 dias é grátis e não pede cartão de crédito. Depois, os planos são R$ 97, R$ 197 e R$ 397 por mês (ou 10 meses
+              por ano, pagando o anual), conforme o número de pessoas e de análises de edital por mês. Todas as funções vêm em todos os planos.
             </p>
           </details>
 
