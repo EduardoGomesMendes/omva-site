@@ -1149,3 +1149,28 @@ ol.passos { padding: 0; margin: 0; list-style: none; align-items: stretch; }
   border-radius: var(--radius-sm);
   padding: var(--space-2) var(--space-3);
 }
+
+
+/* ==========================================================================
+   Conversão: duas portas no hero, painel em grade (sem carrossel) e galeria
+   ========================================================================== */
+.portas { gap: var(--space-4); }
+.portas > .produto-destaque { flex: 1 1 340px; min-width: 0; }
+.portas .botao { align-self: flex-start; }
+
+/* O painel do omvazap deixou de ser carrossel: todas as telas à vista, sem depender de deslizar. */
+.carrossel--grade .carrossel__faixa {
+  flex-wrap: wrap;
+  overflow: visible;
+  scroll-snap-type: none;
+  padding: 0;
+}
+.carrossel--grade .tela.carrossel__slide { flex: 1 1 340px; min-width: 0; }
+
+.galeria { gap: var(--space-4); }
+.galeria__item { flex: 1 1 calc((100% - var(--space-4)) / 2); min-width: 300px; gap: var(--space-3); }
+.galeria__item a { display: block; border: 1px solid var(--border); border-radius: var(--radius-md); overflow: hidden; background-color: var(--surface); }
+.galeria__item a:focus-visible { outline: 3px solid var(--brand-hover); outline-offset: 2px; }
+.galeria__item img { display: block; width: 100%; height: auto; }
+/* Telas de alturas diferentes entram no mesmo quadro, alinhadas pelo topo, para a grade ficar uniforme. */
+.galeria__item img { aspect-ratio: 16 / 10; object-fit: cover; object-position: top; }
