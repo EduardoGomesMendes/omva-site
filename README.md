@@ -13,7 +13,9 @@ rolando de lado com o dedo ou o mouse). São poucos arquivos:
 abrir o `index.html` no navegador já mostra o site exatamente como ele fica no ar.
 
 ```
-index.html                      a página
+index.html                      A Omva (a empresa: missão, visão, valores e a porta para os produtos)
+omvazap/index.html              página do omvazap (recursos, planos, segurança)
+duvidas/index.html              dúvidas dos dois produtos (omvazap e omvalic)
 vagas/index.html                página da oferta "10 vagas grátis no teste" (vem do Instagram)
 omvalic/index.html              página do segundo produto (licitações + resumo de edital por IA)
 favicon.svg                     ícone da marca
@@ -24,7 +26,7 @@ assets/img/omva-icone.svg       ícone isolado
 
 ## Dados estruturados (SEO)
 
-O `<head>` do `index.html` tem dois blocos JSON-LD: o `SoftwareApplication` (com os três preços) e o `FAQPage`.
+O `<head>` do `omvazap/index.html` tem o JSON-LD `SoftwareApplication` (com os três preços) e o do `duvidas/index.html` tem o `FAQPage`.
 Eles **espelham** o que está visível na página — as perguntas do FAQ e os valores dos planos. Ao mudar
 um preço ou uma pergunta, mude o bloco correspondente também; o Google ignora dado estruturado que
 diverge do texto da página.
@@ -65,7 +67,7 @@ Só "preços de referência", "mais portais", "pagamento online" e "áudio nas c
 
 A hospedagem manda o navegador guardar o CSS por 7 dias (`Cache-Control: max-age=604800`). Por isso o link do CSS
 nas páginas leva um número de versão (`omva.css?v=...`). **Toda vez que mudar o `omva.css`, troque esse número**
-no `index.html`, no `vagas/index.html` e no `omvalic/index.html`; senão quem já visitou o site recebe o HTML novo com o CSS antigo, e
+em todas as páginas (`index.html`, `omvazap/`, `omvalic/`, `duvidas/` e `vagas/`); senão quem já visitou o site recebe o HTML novo com o CSS antigo, e
 as partes novas aparecem sem estilo.
 
 ## Publicar

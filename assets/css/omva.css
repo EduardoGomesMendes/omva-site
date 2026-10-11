@@ -1174,3 +1174,19 @@ ol.passos { padding: 0; margin: 0; list-style: none; align-items: stretch; }
 .galeria__item img { display: block; width: 100%; height: auto; }
 /* Telas de alturas diferentes entram no mesmo quadro, alinhadas pelo topo, para a grade ficar uniforme. */
 .galeria__item img { aspect-ratio: 16 / 10; object-fit: cover; object-position: top; }
+
+/* ==========================================================================
+   Menu principal por páginas: A Omva · omvazap · omvalic · Dúvidas
+   ========================================================================== */
+.topo__abas { gap: var(--space-4); align-items: center; }
+.topo__link[aria-current="page"] { color: var(--brand-hover); font-weight: 600; box-shadow: 0 2px 0 var(--brand-hover); }
+
+@media (max-width: 720px) {
+  /* No celular as quatro abas descem para uma segunda linha, em largura total. */
+  .topo__interno { flex-wrap: wrap; padding-block: var(--space-2); column-gap: var(--space-2); row-gap: 0; }
+  .topo__logo { height: 30px; }
+  .topo__interno .botao--compacto { padding-inline: 14px; min-height: 36px; font-size: 13px; }
+  .topo__nav { display: contents; }
+  .topo__abas { order: 3; flex: 1 1 100%; justify-content: space-between; gap: var(--space-2); padding-bottom: var(--space-1); }
+  .topo__interno .menu--entrar { margin-left: auto; }
+}

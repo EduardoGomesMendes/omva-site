@@ -25,7 +25,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/omva.css?v=20261008a">
+  <link rel="stylesheet" href="../assets/css/omva.css?v=20261011b">
 
   <!-- DADOS ESTRUTURADOS: espelham o texto desta página (ver README), inclusive os preços da seção Planos. -->
   <script type="application/ld+json">
@@ -65,11 +65,12 @@
       </a>
 
       <nav class="linha topo__nav" aria-label="Principal">
-        <a class="topo__link esconde-mobile" href="/#sobre">A Omva</a>
-        <a class="topo__link esconde-mobile" href="/#omvazap">omvazap</a>
-        <a class="topo__link esconde-mobile" href="#funcoes">Funções</a>
-        <a class="topo__link esconde-mobile" href="#planos">Planos</a>
-        <a class="topo__link esconde-mobile" href="#duvidas">Dúvidas</a>
+        <div class="linha topo__abas">
+          <a class="topo__link" href="/">A Omva</a>
+          <a class="topo__link" href="/omvazap/">omvazap</a>
+          <a class="topo__link" aria-current="page" href="/omvalic/">omvalic</a>
+          <a class="topo__link" href="/duvidas/">Dúvidas</a>
+        </div>
         <details class="menu menu--entrar" data-menu>
           <summary class="topo__link menu__titulo">Entrar</summary>
           <div class="menu__painel menu__painel--direita pilha">
@@ -576,61 +577,13 @@
 
     <!-- ====================== Dúvidas ====================== -->
     <section class="secao" id="duvidas">
-      <div class="envoltorio pilha gap-5">
-        <div class="pilha gap-3" style="max-width:660px">
-          <p class="olho">Dúvidas</p>
-          <h2 class="titulo-secao">O que vale saber antes de testar</h2>
-        </div>
-
-        <div class="pilha gap-3 faq" style="max-width:760px">
-
-          <details class="faq__item">
-            <summary class="faq__pergunta">Já posso testar o omvalic?</summary>
-            <p class="texto suave faq__resposta">
-              Pode. O cadastro está aberto e o teste dura 7 dias, sem cartão de crédito. Você informa os dados
-              da empresa, confirma o e-mail e já entra para buscar licitações e analisar editais.
-            </p>
-          </details>
-
-          <details class="faq__item">
-            <summary class="faq__pergunta">Quanto vai custar?</summary>
-            <p class="texto suave faq__resposta">
-              O teste de 7 dias é grátis e não pede cartão de crédito. Depois, os planos são R$ 97, R$ 197 e R$ 397 por mês (ou 10 meses
-              por ano, pagando o anual), conforme o número de pessoas e de análises de edital por mês. Todas as funções vêm em todos os planos.
-            </p>
-          </details>
-
-          <details class="faq__item">
-            <summary class="faq__pergunta">De onde vêm as licitações?</summary>
-            <p class="texto suave faq__resposta">
-              Do PNCP, o Portal Nacional de Contratações Públicas, onde a Nova Lei de Licitações (14.133)
-              manda publicar. Licitações divulgadas só em outros portais podem não aparecer por enquanto.
-            </p>
-          </details>
-
-          <details class="faq__item">
-            <summary class="faq__pergunta">A IA substitui a leitura do edital, ou um advogado?</summary>
-            <p class="texto suave faq__resposta">
-              Não. O resumo é um apoio à leitura e pode errar ou deixar passar uma cláusula. Por isso ele
-              cita o item do edital, para você conferir no original antes de decidir. Ele não é parecer jurídico.
-            </p>
-          </details>
-
-          <details class="faq__item">
-            <summary class="faq__pergunta">O que acontece com o edital que eu resumo?</summary>
-            <p class="texto suave faq__resposta">
-              Editais são documentos públicos. Para resumir, o conteúdo do edital é enviado a um serviço
-              de inteligência artificial (a Anthropic), que devolve o texto do resumo.
-            </p>
-          </details>
-
-          <details class="faq__item">
-            <summary class="faq__pergunta">Preciso ter o omvazap?</summary>
-            <p class="texto suave faq__resposta">
-              Não. O omvalic é um produto separado do omvazap, e um não depende do outro.
-            </p>
-          </details>
-
+      <div class="envoltorio chamada pilha">
+        <h2 class="titulo-secao">Ficou com alguma dúvida?</h2>
+        <p class="texto-grande suave" style="max-width:520px">
+          Preço, de onde vêm as licitações, o que a IA faz com o edital e o que ela não substitui: as respostas estão numa página só.
+        </p>
+        <div class="linha gap-3 quebra" style="justify-content:center">
+          <a class="botao botao--secundario" href="/duvidas/#omvalic">Ver as dúvidas sobre o omvalic</a>
         </div>
       </div>
     </section>
@@ -667,9 +620,9 @@
       </div>
 
       <div class="linha gap-4 quebra centro">
-        <a class="topo__link" href="/">Conhecer a Omva</a>
-        <a class="topo__link" href="https://omvazap.omva.com.br">Entrar no omvazap</a>
-        <a class="topo__link" href="https://omvalic.omva.com.br">Entrar no omvalic</a>
+        <a class="topo__link" href="/omvazap/">omvazap</a>
+        <a class="topo__link" href="/omvalic/">omvalic</a>
+        <a class="topo__link" href="/duvidas/">Dúvidas</a>
         <a class="topo__link" href="https://wa.me/552431920676" rel="noopener">(24) 3192-0676</a>
         <a class="topo__link" href="mailto:contato@omva.com.br">contato@omva.com.br</a>
         <span class="texto-apoio">© 2026 Omva · Contamos visitas de forma anônima, sem cookies.</span>
@@ -677,24 +630,23 @@
     </div>
   </footer>
 
+  <!-- Menus (Entrar): fecham ao clicar fora, em um link ou com Esc. -->
   <script>
     (function () {
-      /* ---- Menus (produtos e entrar): fecham ao clicar fora, em um link ou com Esc; abrir um fecha o outro ---- */
       var menus = Array.prototype.slice.call(document.querySelectorAll('[data-menu]'));
-      if (menus.length) {
-        document.addEventListener('click', function (e) {
-          menus.forEach(function (m) { if (!m.contains(e.target)) m.open = false; });
+      if (!menus.length) return;
+      document.addEventListener('click', function (e) {
+        menus.forEach(function (m) { if (!m.contains(e.target)) m.open = false; });
+      });
+      menus.forEach(function (m) {
+        m.addEventListener('click', function (e) { if (e.target.closest('a')) m.open = false; });
+        m.addEventListener('toggle', function () {
+          if (m.open) menus.forEach(function (outro) { if (outro !== m) outro.open = false; });
         });
-        menus.forEach(function (m) {
-          m.addEventListener('click', function (e) { if (e.target.closest('a')) m.open = false; });
-          m.addEventListener('toggle', function () {
-            if (m.open) menus.forEach(function (outro) { if (outro !== m) outro.open = false; });
-          });
-        });
-        document.addEventListener('keydown', function (e) {
-          if (e.key === 'Escape') menus.forEach(function (m) { m.open = false; });
-        });
-      }
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') menus.forEach(function (m) { m.open = false; });
+      });
     })();
   </script>
 
