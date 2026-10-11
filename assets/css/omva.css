@@ -1190,3 +1190,8 @@ ol.passos { padding: 0; margin: 0; list-style: none; align-items: stretch; }
   .topo__abas { order: 3; flex: 1 1 100%; justify-content: space-between; gap: var(--space-2); padding-bottom: var(--space-1); }
   .topo__interno .menu--entrar { margin-left: auto; }
 }
+
+/* Vídeo de demonstração: 16:9, no máximo da largura do conteúdo. */
+.video-demo { max-width: 960px; width: 100%; margin-inline: auto; }
+.video-demo video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background-color: var(--ink); border-radius: var(--radius-md); border: 1px solid var(--border); }
+.video-demo figcaption { text-align: center; }
