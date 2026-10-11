@@ -16,7 +16,7 @@ abrir o `index.html` no navegador já mostra o site exatamente como ele fica no 
 index.html                      A Omva (a empresa: missão, visão, valores e a porta para os produtos)
 omvazap/index.html              página do omvazap (recursos, planos, segurança)
 duvidas/index.html              dúvidas dos dois produtos (omvazap e omvalic)
-vagas/index.html                página da oferta "10 vagas grátis no teste" (vem do Instagram)
+vagas/index.html                página desativada: só redireciona para /omvazap/ (links antigos do Instagram)
 omvalic/index.html              página do segundo produto (licitações + resumo de edital por IA)
 favicon.svg                     ícone da marca
 assets/css/omva.css             tokens da marca + estilos
@@ -67,7 +67,7 @@ Só "preços de referência", "mais portais", "pagamento online" e "áudio nas c
 
 A hospedagem manda o navegador guardar o CSS por 7 dias (`Cache-Control: max-age=604800`). Por isso o link do CSS
 nas páginas leva um número de versão (`omva.css?v=...`). **Toda vez que mudar o `omva.css`, troque esse número**
-em todas as páginas (`index.html`, `omvazap/`, `omvalic/`, `duvidas/` e `vagas/`); senão quem já visitou o site recebe o HTML novo com o CSS antigo, e
+em todas as páginas (`index.html`, `omvazap/`, `omvalic/`e `duvidas/`); senão quem já visitou o site recebe o HTML novo com o CSS antigo, e
 as partes novas aparecem sem estilo.
 
 ## Publicar
