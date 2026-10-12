@@ -1195,3 +1195,8 @@ ol.passos { padding: 0; margin: 0; list-style: none; align-items: stretch; }
 .video-demo { max-width: 960px; width: 100%; margin-inline: auto; }
 .video-demo video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background-color: var(--ink); border-radius: var(--radius-md); border: 1px solid var(--border); }
 .video-demo figcaption { text-align: center; }
+
+/* Na página com barra fixa de conversão (celular), o botão de WhatsApp fica acima da barra. */
+@media (max-width: 820px) {
+  .com-cta-fixo .whats-flutuante { bottom: 96px; }
+}
