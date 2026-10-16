@@ -10,8 +10,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const RAIZ = path.resolve(import.meta.dirname, '..');
-const ATUAL = '552431920676';
-const ATUAL_ESCRITO = '(24) 3192-0676';
+const ATUAL = '555121601745';
+const ATUAL_ESCRITO = '(51) 2160-1745';
 const [novo, escrito] = process.argv.slice(2);
 
 function paginas(pasta) {
