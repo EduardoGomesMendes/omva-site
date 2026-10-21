@@ -61,7 +61,7 @@ mude lá primeiro e depois aqui, no card, na pergunta "Quanto vai custar?" e no 
 A página separa **"Funciona hoje"** de **"Planejado"** (selos `selo-estado`). Ao entregar uma função planejada,
 troque o selo e mova o card para a seção "o que já funciona". Em 2026-10-10 foram movidos para "funciona hoje": alertas no WhatsApp,
 funil, checklist de documentos, conversas no WhatsApp, equipe com acesso próprio, leitura de ZIP/Word/planilha e a marca da empresa.
-Só "pagamento online" segue como planejado ("mais portais" virou o filtro por portal de origem, 2026-10-13).
+Nada segue como planejado: "mais portais" virou o filtro por portal de origem (2026-10-13) e o pagamento online no Asaas entrou no ar (2026-10-21). A seção "O que ainda vamos construir" foi removida; volte com ela (selo `selo-estado--planejado`) quando houver um item planejado de novo.
 
 ## Cache do CSS
 
