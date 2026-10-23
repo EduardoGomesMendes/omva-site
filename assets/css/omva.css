@@ -426,9 +426,62 @@ a:focus-visible, button:focus-visible {
 
 .rodape {
   border-top: 1px solid var(--border);
-  padding-block: var(--space-5);
+  background-color: var(--surface-alt);
+  /* Folga embaixo: o botão flutuante do WhatsApp fica fixo no canto e cobriria o último texto. */
+  padding-block: 48px 88px;
+}
+
+/* Em cima: a marca à esquerda e as colunas de links à direita. Embaixo, numa faixa à parte: os dados da empresa. */
+.rodape__topo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-5) 64px;
+}
+
+.rodape__marca {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* sem isto o logo se estica até a largura da coluna e o desenho fica solto no meio */
+  gap: var(--space-2);
 }
 .rodape__logo { height: 28px; width: auto; }
+
+.rodape__colunas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-5) 64px;
+}
+
+.rodape__coluna {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  min-width: 140px;
+}
+
+.rodape__titulo {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: var(--space-1);
+}
+
+.rodape__base {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-2) var(--space-5);
+  margin-top: var(--space-5);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--border);
+}
+.rodape__base .texto-apoio { font-size: 13px; line-height: 20px; }
 
 /* ==========================================================================
    Telas pequenas
@@ -988,6 +1041,9 @@ ol.passos { padding: 0; margin: 0; list-style: none; align-items: stretch; }
 @media (max-width: 1000px) {
   .cards > .card,
   .passo { flex-basis: calc((100% - var(--space-4)) / 2); min-width: 0; }
+  /* Sem crescer: o card que sobra sozinho na última linha não vira uma faixa de largura total; fica do mesmo tamanho dos outros, centralizado. */
+  .cards > .card { flex-grow: 0; }
+  .cards { justify-content: center; }
 }
 @media (max-width: 620px) {
   .cards > .card,
@@ -1199,4 +1255,20 @@ ol.passos { padding: 0; margin: 0; list-style: none; align-items: stretch; }
 /* Na página com barra fixa de conversão (celular), o botão de WhatsApp fica acima da barra. */
 @media (max-width: 820px) {
   .com-cta-fixo .whats-flutuante { bottom: 96px; }
+}
+
+/* Hero da página da Omva: sem imagem ao lado, o texto fica centralizado, como os títulos das seções que vêm depois. */
+.hero--centrado .hero__texto {
+  max-width: 760px;
+  margin-inline: auto;
+  align-items: center;
+  text-align: center;
+}
+.hero--centrado .hero__texto .linha { justify-content: center; }
+
+/* Celular: duas colunas de links lado a lado (em vez de uma pilha de nove linhas) e menos espaço entre os blocos. */
+@media (max-width: 820px) {
+  .rodape { padding-block: 40px 88px; }
+  .rodape__topo, .rodape__colunas { gap: var(--space-4) var(--space-5); }
+  .rodape__coluna { min-width: 130px; }
 }

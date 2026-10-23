@@ -23,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/omva.css?v=20261012a">
+  <link rel="stylesheet" href="assets/css/omva.css?v=20261023a">
   <script>document.documentElement.classList.add('js')</script>
 
   <script type="application/ld+json">
@@ -89,7 +89,7 @@
   <main>
 
     <!-- ====================== A empresa ====================== -->
-    <section class="hero" id="omva">
+    <section class="hero hero--centrado" id="omva">
       <div class="envoltorio pilha gap-5">
         <div class="pilha gap-3 hero__texto">
           <p class="olho">A Omva · software para quem vende e atende</p>
@@ -142,7 +142,7 @@
             que a equipe entende no primeiro dia. É assim que desenhamos tudo o que fazemos.
           </p>
         </div>
-        <div class="linha cards quebra">
+        <div class="linha cards cards--quatro quebra">
           <article class="card pilha">
             <h3 class="titulo-card">Continuidade</h3>
             <p class="texto suave">
@@ -241,23 +241,36 @@
 
   <!-- ====================== Rodapé ====================== -->
   <footer class="rodape">
-    <div class="envoltorio linha centro entre quebra gap-3 empilha">
-      <div class="pilha gap-2">
-        <img class="rodape__logo" src="assets/img/omva-logotipo.svg" alt="Omva">
-        <p class="texto-apoio">Atendimento contínuo, sempre.</p>
-        <p class="texto-apoio">OMVA ATENDIMENTO CONTINUO LTDA · CNPJ 69.724.570/0001-20</p>
-        <p class="texto-apoio">Avenida Cristóvão Colombo, 2144, sala 408, 3º andar · Floresta · Porto Alegre/RS · CEP 90560-001</p>
+    <div class="envoltorio">
+      <div class="rodape__topo">
+        <div class="rodape__marca">
+          <img class="rodape__logo" src="assets/img/omva-logotipo.svg" alt="Omva">
+          <p class="texto-apoio">Atendimento contínuo, sempre.</p>
+        </div>
+
+        <nav class="rodape__colunas" aria-label="Rodapé">
+          <div class="rodape__coluna">
+            <span class="rodape__titulo">Produtos</span>
+            <a class="topo__link" href="/omvazap/">omvazap</a>
+            <a class="topo__link" href="/omvalic/">omvalic</a>
+          </div>
+          <div class="rodape__coluna">
+            <span class="rodape__titulo">Omva</span>
+            <a class="topo__link" href="/duvidas/">Dúvidas</a>
+            <a class="topo__link" href="/privacidade/">Privacidade</a>
+            <a class="topo__link" href="/termos/">Termos de uso</a>
+          </div>
+          <div class="rodape__coluna">
+            <span class="rodape__titulo">Contato</span>
+            <a class="topo__link" href="https://wa.me/555121601745" rel="noopener">WhatsApp (51) 2160-1745</a>
+            <a class="topo__link" href="mailto:contato@omva.com.br">contato@omva.com.br</a>
+          </div>
+        </nav>
       </div>
 
-      <div class="linha gap-4 quebra centro">
-        <a class="topo__link" href="/omvazap/">omvazap</a>
-        <a class="topo__link" href="/omvalic/">omvalic</a>
-        <a class="topo__link" href="/duvidas/">Dúvidas</a>
-        <a class="topo__link" href="/privacidade/">Privacidade</a>
-        <a class="topo__link" href="/termos/">Termos</a>
-        <a class="topo__link" href="https://wa.me/555121601745" rel="noopener">(51) 2160-1745</a>
-        <a class="topo__link" href="mailto:contato@omva.com.br">contato@omva.com.br</a>
-        <span class="texto-apoio">© 2026 Omva · Contamos visitas de forma anônima, sem cookies.</span>
+      <div class="rodape__base">
+        <p class="texto-apoio">OMVA ATENDIMENTO CONTINUO LTDA · CNPJ 69.724.570/0001-20<br>Avenida Cristóvão Colombo, 2144, sala 408, 3º andar · Floresta · Porto Alegre/RS · CEP 90560-001</p>
+        <p class="texto-apoio">© 2026 Omva<br>Contamos visitas de forma anônima, sem cookies.</p>
       </div>
     </div>
   </footer>
