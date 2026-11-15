@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Entenda um edital em minutos, não em horas — Omva</title>
+  <meta name="description" content="O omvalic lê o edital com inteligência artificial, resume o que importa, aponta exigências e prazos e ajuda você a decidir se vale a pena disputar.">
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="https://omva.com.br/comecar/omvalic/">
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/omva.css?v=20261023a">
+  <script>document.documentElement.classList.add('js')</script>
+  <style>
+    .comecar { display: grid; gap: var(--space-5); padding-block: var(--space-5); align-items: start; }
+    @media (min-width: 880px) { .comecar { grid-template-columns: 1fr 1fr; gap: 56px; padding-block: 56px; } }
+    .comecar h1 { font-family: var(--display); font-weight: 600; font-size: clamp(1.7rem, 4.5vw, 2.4rem); line-height: 1.15; margin: 0 0 var(--space-3); }
+    .comecar__lista { list-style: none; margin: var(--space-4) 0 0; padding: 0; display: grid; gap: var(--space-3); }
+    .comecar__lista li { padding-left: 28px; position: relative; color: var(--ink); }
+    .comecar__lista li::before { content: "✓"; position: absolute; left: 0; color: var(--brand); font-weight: 600; }
+    .cartao-form { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: var(--space-4); box-shadow: 0 8px 30px rgba(28,25,23,.06); }
+    .cartao-form h2 { font-family: var(--display); font-size: 1.15rem; margin: 0 0 var(--space-1); }
+    .campo { border: 0; padding: 0; margin: var(--space-3) 0 0; min-width: 0; }
+    .campo label, .campo legend { display: block; font-weight: 500; font-size: .95rem; margin-bottom: 6px; padding: 0; }
+    .campo input[type=text] { width: 100%; box-sizing: border-box; font: inherit; padding: 12px 14px; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--surface); color: var(--ink); }
+    .campo input[type=text]:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+    .opcoes { display: grid; gap: 8px; }
+    .opcao { display: flex !important; align-items: center; gap: 10px; margin: 0 !important; font-weight: 400 !important; padding: 11px 14px; border: 1px solid var(--border); border-radius: var(--radius-sm); cursor: pointer; }
+    .opcao:has(input:checked) { border-color: var(--brand); background: var(--brand-tint); }
+    .opcao input { accent-color: var(--brand); width: 18px; height: 18px; margin: 0; }
+    .cartao-form .botao { width: 100%; margin-top: var(--space-4); justify-content: center; }
+    .cartao-form .nota { margin: var(--space-3) 0 0; font-size: .85rem; color: var(--ink-muted); text-align: center; }
+  </style>
+</head>
+<body>
+  <header class="topo">
+    <div class="envoltorio linha centro entre topo__interno gap-3">
+      <a href="/" aria-label="Omva, página inicial"><img class="topo__logo" src="../../assets/img/omva-logotipo.svg" alt="Omva"></a>
+      <a class="topo__link" href="/omvalic/">Conhecer o omvalic</a>
+    </div>
+  </header>
+
+  <main class="envoltorio comecar">
+    <section>
+      <p class="rotulo">OMVALIC · TESTE GRÁTIS POR 7 DIAS</p>
+      <h1>Entenda um edital em minutos, não em horas</h1>
+      <p class="texto-apoio">O omvalic lê o edital com inteligência artificial, resume o que importa, aponta exigências e prazos e ajuda você a decidir se vale a pena disputar.</p>
+      <ul class="comecar__lista"><li>Resumo do edital com objeto, prazos, documentos e riscos</li><li>Análise em minutos, no lugar de horas de leitura</li><li>Teste grátis por 7 dias, com até 5 análises e sem cartão</li><li>Planos a partir de R$ 127/mês, sem fidelidade</li></ul>
+    </section>
+
+    <section class="cartao-form" aria-labelledby="form-titulo">
+      <h2 id="form-titulo">Conte rapidinho sobre a sua empresa</h2>
+      <p class="texto-apoio">Leva menos de 1 minuto. Depois você fala direto com a gente no WhatsApp.</p>
+      <form id="form" novalidate>
+        <div class="campo">
+          <label for="nome">Seu nome</label>
+          <input id="nome" name="nome" type="text" maxlength="60" autocomplete="name" required placeholder="Como podemos te chamar?">
+        </div>
+        <div class="campo">
+          <label for="vende">O que a sua empresa vende ou presta?</label>
+          <input id="vende" name="vende" type="text" maxlength="80" autocomplete="off" required placeholder="Ex.: material de escritório, TI, obras">
+        </div>
+        <fieldset class="campo">
+          <legend>Quantos editais você analisa por mês?</legend>
+          <div class="opcoes">
+            <label class="opcao"><input type="radio" name="editais" value="Ainda não disputo licitações" required><span>Ainda não disputo licitações</span></label>
+            <label class="opcao"><input type="radio" name="editais" value="1 a 5 por mês" required><span>1 a 5 por mês</span></label>
+            <label class="opcao"><input type="radio" name="editais" value="Mais de 5 por mês" required><span>Mais de 5 por mês</span></label>
+          </div>
+        </fieldset>
+        <button class="botao botao--principal" type="submit">Continuar no WhatsApp</button>
+        <p class="nota">Sem cartão e sem fidelidade. Suas respostas só servem para a gente te atender melhor.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="envoltorio">
+      <div class="rodape__base">
+        <p class="texto-apoio">OMVA ATENDIMENTO CONTINUO LTDA · CNPJ 69.724.570/0001-20<br>Avenida Cristóvão Colombo, 2144, sala 408 · Floresta · Porto Alegre/RS</p>
+        <p class="texto-apoio"><a href="/privacidade/">Privacidade</a> · <a href="/termos/">Termos de uso</a><br>© 2026 Omva</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var NUMERO = '555121601745';
+      var CODIGO = 'LIC3';
+      var ABERTURA = "Quero analisar um edital grátis";
+      var CAMPOS = [{"id": "nome", "rotulo": "Nome"}, {"id": "vende", "rotulo": "O que vende"}, {"id": "editais", "rotulo": "Editais por mês"}];
+      var form = document.getElementById('form');
+
+      function limpa(t) { return String(t || '').replace(/[\r\n]+/g, ' ').replace(/\s+/g, ' ').trim(); }
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (!form.reportValidity()) return;
+        var linhas = [ABERTURA + ' (#' + CODIGO + ')'];
+        CAMPOS.forEach(function (c) {
+          var el = form.elements[c.id];
+          var v = el && el.value ? limpa(el.value) : '';
+          if (v) linhas.push(c.rotulo + ': ' + v);
+        });
+        var q = new URLSearchParams(location.search);
+        var anuncio = limpa(q.get('utm_content') || q.get('ad') || '');
+        var url = 'https://wa.me/' + NUMERO + '?text=' + encodeURIComponent(linhas.join('\n'));
+        // Avisa o contador anônimo (sem cookie) e abre o WhatsApp.
+        try { if (navigator.sendBeacon) navigator.sendBeacon('https://omvalic.omva.com.br/api/m', JSON.stringify({ p: location.pathname, e: 'clique_whatsapp', o: (q.get('utm_source') || 'direto').toLowerCase().slice(0, 40) })); } catch (err) {}
+        window.location.href = url;
+      });
+    })();
+  </script>
+  <script src="../../assets/js/omva.js" defer></script>
+</body>
+</html>
